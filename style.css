@@ -1,0 +1,26 @@
+#container {
+    display:flex;
+    height: 960px;
+    width: 960px;
+    flex-wrap: wrap;
+    
+    
+    
+    
+}
+
+.column{
+    display: flex;
+    flex-grow: 1;
+    
+    flex-direction: column;
+    
+    
+}
+
+.row{
+    flex-grow: 1;
+    
+    
+    
+}
