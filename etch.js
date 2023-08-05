@@ -22,7 +22,9 @@ function makeDivs(){
               row.classList.add('row');
               column.appendChild(row);
               row.addEventListener('mouseover', (event) => {
-                event.target.style.backgroundColor ="orange";
+                
+                event.target.style.backgroundColor = darkenColor();
+                
             });
           }
             container.appendChild(column);
@@ -40,3 +42,26 @@ function byeBye(){
     }
 }
 
+/*
+function randomColor() {
+    let color = [];
+    for (let i = 0; i < 3; i++) {
+      color.push(Math.floor(Math.random() * 256));
+    }
+    return 'rgb(' + color.join(', ') + ')';
+  } 
+*/
+
+function darkenColor(){
+    let color = [];
+    for (let i = 0; i < 3; i++) {
+        
+        color.push(Math.floor(255 - ((10/100) * 255)));
+    }  
+    return 'rgb(' + color.join(', ') + ')';
+    
+}
+/*
+let r = Math.floor(color.slice(0,1) - ((10/100) * 255));
+let g = Math.floor(color.slice(1,2) - ((10/100) * 255));
+let b = Math.floor(color.slice(2,3) - ((10/100) * 255)); */
